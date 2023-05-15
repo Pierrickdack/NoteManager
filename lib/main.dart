@@ -1,15 +1,14 @@
-import 'package:appetud/screens/signup_screen.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:appetud/controllers/auth_controller.dart';
-import 'package:appetud/utils/constants.dart';
+import 'package:appetud/home_screen.dart';
+import 'package:appetud/iintroduction_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+
+bool show = true;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp().then((value) {
-    Get.put(AuthController());
-  });
+  final prefs = await SharedPreferences.getInstance();
+  show = prefs.getBool('ON_BOARDING') ?? true;
   runApp(const MyApp());
 }
 
@@ -18,14 +17,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Consult Notes',
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: backgroundColor,
+    return MaterialApp(
+      title: 'Flutter On Boarding',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
-      home: SignUpScreen(),
+      home: show ? IntroScreen() : const HomeScreen(),
     );
   }
 }
-
