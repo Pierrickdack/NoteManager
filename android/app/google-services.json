@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "292375305751",
+    "project_id": "note-manager-2f19e",
+    "storage_bucket": "note-manager-2f19e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:292375305751:android:997638031252b08b0a8652",
+        "android_client_info": {
+          "package_name": "com.example.appetud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "292375305751-dmlm639m6aavh2gc6a9889hbh2v4uv9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrVtKfYX08WabYmdxeQSuMoiKjzRinCbE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "292375305751-dmlm639m6aavh2gc6a9889hbh2v4uv9v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
